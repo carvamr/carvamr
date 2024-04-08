@@ -24,3 +24,23 @@ function addZero(i) {
 }
 
 showTime();
+
+// This function will focus on the search bar and clear it
+function focusAndClearSearchBar() {
+	var searchBox = document.getElementById("googleSearchBox");
+	searchBox.focus();
+	searchBox.value = '';
+}
+
+// Call the focusAndClearSearchBar function when the page loads and after a search is performed
+window.onload = focusAndClearSearchBar;
+
+function searchGoogle(event) {
+  if (event.key === "Enter") {
+    var searchText = document.getElementById("googleSearchBox").value;
+    var searchQuery = encodeURIComponent(searchText);
+    window.open("https://www.google.com/search?q=" + searchQuery, "_blank");
+    // Clear the search box and focus on it
+    focusAndClearSearchBar();
+  }
+}

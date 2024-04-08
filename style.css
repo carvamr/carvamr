@@ -49,7 +49,6 @@ h2 {
   color: #a56951;
   grid-column: 1/-1;
   text-align: center;
-  margin-bottom: 2.3em;
 }
 
 ul {
@@ -83,4 +82,19 @@ a {
 a:hover {
   color: #ff864e;
   font-style: italic;
+}
+
+.search-box {
+  grid-column: 1/-1; /* This makes it stretch across all columns in the grid */
+  padding: 0.5em 0; /* Add padding to the top and bottom if needed */
+}
+
+#googleSearchBox {
+  width: 100%; /* Stretch the search box to fill the container */
+  padding: 0.5em; /* Adjust padding as needed */
+  font-size: 1em; /* Your preference for font size */
+  border: 2px solid #cca86b; /* Keep the border color consistent with your design */
+  border-radius: 20px; /* Rounded corners similar to Google's style */
+  color: #dcc6a0; /* Text color for dark mode */
+  background-color: #000000; /* Background color for dark mode */
 }
